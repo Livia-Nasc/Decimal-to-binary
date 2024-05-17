@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/binario.css">
+    <title>Conversor binário</title>
+</head>
+<body>
+    <main id="container">
+        <div id="calcular">
+            <h2>Conversor de decimal para binário</h2>
+            <div id="inputContainer">
+                <div class="input-field">
+                    <h4>Valor decimal</h4>
+                    <input type="text" id="valor" oninput="conversor(this.value)">
+                </div>
+            </div>
+            <div id="resultado">
+                <h4>Valor binário</h4>
+                <span id="result">0</span>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        function conversor(num){
+            let dec = +num
+            if (isNaN(dec)){
+                document.getElementById('result').innerHTML = "Não é um número."
+            }
+            else{
+                let bin = dec.toString(2)
+                document.getElementById('result').innerHTML = bin
+            }
+        }
+    </script>
+</body>
+</html>
